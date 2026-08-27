@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "RAEY GPT Suite",
+  "version": "2.7.0",
+  "description": "Personal ChatGPT interface with dark-purple liquid glass, massive composer glow, unlimited Favorites, wallpaper positioning, clipboard prompt tools, shortcuts, and integrated Raey Room Exporter v0.5.3 with no-new-tab current-room ZIP export.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "unlimitedStorage",
+    "downloads",
+    "tabs",
+    "scripting",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://*.oaiusercontent.com/*",
+    "https://*.oaistatic.com/*",
+    "https://*.openai.com/*"
+  ],
+  "action": {
+    "default_title": "RAEY GPT Suite",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "css": [
+        "theme.css",
+        "suite.css"
+      ],
+      "js": [
+        "exporter-content.js",
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "manager.html",
+        "manager.js",
+        "zip.js"
+      ],
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ]
+    }
+  ]
+}
