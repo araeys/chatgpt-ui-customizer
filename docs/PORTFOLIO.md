@@ -1,8 +1,8 @@
-# RAEY GPT Suite — Project Case Study
+# ChatGPT UI Customizer — Project Case Study
 
 ## Overview
 
-RAEY GPT Suite is a personal Chrome extension that redesigns and extends the ChatGPT web experience. What began as a dark-purple theme became an experiment in browser-extension UI engineering: working around a frequently changing React interface, streaming DOM updates, portal-based menus, local persistence, custom interaction layers, and authenticated conversation export.
+ChatGPT UI Customizer is a personal Chrome extension that redesigns and extends the ChatGPT web experience. What began as a dark-purple theme became an experiment in browser-extension UI engineering: working around a frequently changing React interface, streaming DOM updates, portal-based menus, local persistence, custom interaction layers, and authenticated conversation export.
 
 The project currently combines three ideas:
 
@@ -32,7 +32,7 @@ ChatGPT's DOM is not a stable static document. Components can be mounted through
 - prefer semantic attributes and known roles over generated class names;
 - avoid reclassifying controls on every text mutation;
 - use first-paint CSS for menus/dialogs where possible;
-- isolate RAEY-owned surfaces from native layout;
+- isolate extension-owned surfaces from native layout;
 - keep fallback selectors narrow.
 
 ### 2. Preventing UI flicker
@@ -55,13 +55,13 @@ The composer uses a large animated glow, but animating large blur radii or layou
 
 ### 5. Unlimited conversation Favorites
 
-ChatGPT's native Pin feature is intentionally untouched. RAEY adds a separate local Favorites layer so the extension never needs to mutate ChatGPT's own pin state.
+ChatGPT's native Pin feature is intentionally untouched. The extension adds a separate local Favorites layer so it never needs to mutate ChatGPT's own pin state.
 
 Favorites are persisted through Chrome extension storage and restored as the SPA changes conversations.
 
 ### 6. Full-room export
 
-The integrated RAEY Room Exporter v0.5.3 is more than a `document.body.innerText` dump. Its pipeline is designed around normalized conversation data and asset integrity.
+The integrated room-export pipeline is more than a `document.body.innerText` dump. It is designed around normalized conversation data and asset integrity.
 
 The exporter includes:
 - API-first transcript recovery;
@@ -78,11 +78,11 @@ The exporter includes:
 The project went through multiple stability-focused revisions:
 
 - **v1** — initial dark-purple ChatGPT skin.
-- **v2** — modular RAEY panel, prompt tools, stats, bookmarks, exporter experiments, shortcuts.
+- **v2** — modular panel, prompt tools, stats, exporter experiments, shortcuts.
 - **v2.1–v2.4** — wallpaper controls, liquid-glass system, first-paint fixes, streaming/flicker fixes, one-surface hierarchy, layout regression work.
 - **v2.5** — unlimited Favorites, wallpaper scaling/positioning, SVG launcher, stronger composer material.
 - **v2.6** — performance-conscious massive composer glow and motion controls.
-- **v2.7** — integrated Room Exporter v0.5.3 and no-new-tab current-room ZIP flow.
+- **v2.7** — integrated full-room exporter and no-new-tab current-room ZIP flow.
 
 Some early features such as per-message Quick Actions and custom Bookmarks were deliberately removed after testing because they added visual clutter and depended too heavily on unstable native message DOM. That removal is part of the design process, not just feature reduction.
 
@@ -100,6 +100,6 @@ Some early features such as per-message Quick Actions and custom Bookmarks were 
 
 ## Current status
 
-RAEY GPT Suite is a personal portfolio build rather than a Chrome Web Store product. ChatGPT's frontend evolves frequently, so maintenance is expected when upstream markup or behavior changes.
+ChatGPT UI Customizer is a personal portfolio build rather than a Chrome Web Store product. ChatGPT's frontend evolves frequently, so maintenance is expected when upstream markup or behavior changes.
 
 The goal of the repository is to document the product thinking, engineering decisions, and extension architecture behind the project rather than present it as an official OpenAI client.
