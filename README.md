@@ -8,6 +8,10 @@
 
 RAEY GPT Suite started as a visual theme experiment and grew into a full interface layer for ChatGPT. The goal is not to replace ChatGPT, but to make the web experience feel more personal, expressive, and useful without breaking the underlying product UI.
 
+**Case study:** [`docs/PORTFOLIO.md`](docs/PORTFOLIO.md)  
+**Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)  
+**Privacy & permissions:** [`docs/PRIVACY.md`](docs/PRIVACY.md)
+
 ## Highlights
 
 ### Dark-purple liquid glass interface
@@ -102,24 +106,16 @@ RAEY GPT Suite
 ├── suite.css              # RAEY panels/components
 ├── popup.html
 ├── popup.js
-├── popup.css
-└── icons/
+└── popup.css
 ```
 
 The extension uses Manifest V3 and runs only on ChatGPT/OpenAI-related hosts declared in `manifest.json`.
 
-## Installation
+## Public repository note
 
-This is currently distributed as an unpacked personal extension.
+This repository is currently the **portfolio/source showcase** for the project. The packaged personal build is maintained separately while the public snapshot is being cleaned for distribution, especially around exporter permissions and release packaging.
 
-1. Clone or download this repository.
-2. Open `chrome://extensions`.
-3. Enable **Developer mode**.
-4. Click **Load unpacked**.
-5. Select the repository folder containing `manifest.json`.
-6. Refresh any open ChatGPT tabs.
-
-Disable older RAEY builds before loading a newer version to prevent multiple stylesheets from competing on the same page.
+That separation is intentional: the exporter has access to authenticated ChatGPT resources in the local browser session, so a public installable release should be reviewed and documented more carefully than a visual-only theme.
 
 ## Privacy and permissions
 
@@ -148,10 +144,10 @@ This is a personal/portfolio build, not a Chrome Web Store release. ChatGPT can 
 
 The project was informed by public experiments and documentation around ChatGPT DOM behavior and liquid-glass UI techniques, including:
 
-- `Dworrall21/chatgpt-bridge` for ChatGPT DOM research
-- `alexchexes` ChatGPT custom-styling gist for surface/fade behavior research
-- `nikdelvin/liquid-glass` and `dpawlikowski/liquid-glass` for liquid-glass rendering ideas
-- `tlyyxjz` ProseMirror prompt-injection gist during early Prompt Library experiments
+- [Dworrall21/chatgpt-bridge](https://github.com/Dworrall21/chatgpt-bridge/blob/main/dom-selectors.md) for ChatGPT DOM research
+- [alexchexes ChatGPT styling gist](https://gist.github.com/alexchexes/d2ff0b9137aa3ac9de8b0448138125ce) for surface/fade behavior research
+- [nikdelvin/liquid-glass](https://github.com/nikdelvin/liquid-glass) and [dpawlikowski/liquid-glass](https://github.com/dpawlikowski/liquid-glass) for liquid-glass rendering ideas
+- [tlyyxjz ProseMirror injection gist](https://gist.github.com/tlyyxjz/5e6edbc7e97cb3a7682af8520de250ce) during early Prompt Library experiments
 
 The current Prompt Library intentionally uses a clipboard-first workflow rather than direct ProseMirror injection.
 
