@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAEY GPT Suite</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main class="panel">
+    <header class="brand glass-card">
+      <div>
+        <p class="eyebrow">RAEY / CHATGPT</p>
+        <h1>GPT Suite <span>v2.6</span></h1>
+        <p id="liveStatus" class="live-status">Live preview ready</p>
+      </div>
+      <label class="switch" aria-label="Enable RAEY GPT Suite">
+        <input id="enabled" type="checkbox" />
+        <span></span>
+      </label>
+    </header>
+
+    <section class="section glass-card">
+      <div class="section-head"><b>Room</b><small>Solid + wallpaper</small></div>
+
+      <label class="row color-row">
+        <span>Room color</span>
+        <input id="roomColor" type="color" value="#08060d" />
+      </label>
+
+      <label class="row color-row">
+        <span>Accent</span>
+        <input id="accent" type="color" value="#8c5cff" />
+      </label>
+
+      <div class="wallpaper-box">
+        <div id="wallpaperPreview" class="wallpaper-preview" aria-label="Wallpaper preview">
+          <span>No wallpaper</span>
+        </div>
+        <div class="wallpaper-actions">
+          <label class="file-button liquid-button">
+            <input id="wallpaperFile" type="file" accept="image/*" />
+            <span>Choose wallpaper</span>
+          </label>
+          <button id="clearWallpaper" class="mini-button" type="button">Clear</button>
+        </div>
+      </div>
+
+      <label class="control">
+        <span><b>Wallpaper opacity</b><output id="wallpaperOpacityValue">35%</output></span>
+        <input id="wallpaperOpacity" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Wallpaper blur</b><output id="wallpaperBlurValue">0px</output></span>
+        <input id="wallpaperBlur" type="range" min="0" max="36" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Wallpaper scale</b><output id="wallpaperScaleValue">100%</output></span>
+        <input id="wallpaperScale" type="range" min="25" max="400" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Wallpaper X</b><output id="wallpaperPositionXValue">50%</output></span>
+        <input id="wallpaperPositionX" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Wallpaper Y</b><output id="wallpaperPositionYValue">50%</output></span>
+        <input id="wallpaperPositionY" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="row">
+        <span>Wallpaper fit</span>
+        <select id="wallpaperFit">
+          <option value="cover">Cover</option>
+          <option value="contain">Contain</option>
+          <option value="auto">Original</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="section glass-card">
+      <div class="section-head"><b>Liquid Glass</b><small>Reflection + depth</small></div>
+
+      <label class="control">
+        <span><b>Glass blur</b><output id="blurValue">18px</output></span>
+        <input id="blur" type="range" min="0" max="40" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Reflection</b><output id="reflectionValue">60%</output></span>
+        <input id="reflection" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Depth</b><output id="depthValue">55%</output></span>
+        <input id="depth" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Accent glow</b><output id="glowValue">28%</output></span>
+        <input id="glow" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Composer glow motion</b><output id="composerGlowMotionValue">82%</output></span>
+        <input id="composerGlowMotion" type="range" min="0" max="100" step="1" />
+      </label>
+
+      <label class="control">
+        <span><b>Corner radius</b><output id="radiusValue">18px</output></span>
+        <input id="radius" type="range" min="8" max="32" step="1" />
+      </label>
+    </section>
+
+    <section class="section glass-card">
+      <div class="section-head"><b>Layout + Motion</b><small>Live</small></div>
+
+      <label class="control">
+        <span><b>Message width</b><output id="messageWidthValue">900px</output></span>
+        <input id="messageWidth" type="range" min="640" max="1120" step="20" />
+      </label>
+
+      <label class="control">
+        <span><b>Message text scale</b><output id="fontScaleValue">100%</output></span>
+        <input id="fontScale" type="range" min="90" max="115" step="1" />
+      </label>
+
+      <label class="row">
+        <span>Density</span>
+        <select id="density">
+          <option value="compact">Compact</option>
+          <option value="comfortable">Comfortable</option>
+          <option value="airy">Airy</option>
+        </select>
+      </label>
+
+      <label class="row"><span>UI animations</span><input id="animations" type="checkbox" /></label>
+      <label class="row"><span>Bubble entrance</span><input id="bubbleAnimations" type="checkbox" /></label>
+
+      <label class="control">
+        <span><b>Bubble motion</b><output id="bubbleMotionValue">65%</output></span>
+        <input id="bubbleMotion" type="range" min="0" max="100" step="5" />
+      </label>
+
+      <label class="row"><span>RAEY watermark</span><input id="watermark" type="checkbox" /></label>
+    </section>
+
+    <section class="section glass-card">
+      <div class="section-head"><b>Features</b><small>Stable modules</small></div>
+      <label class="row"><span>Unlimited Favorites</span><input id="favorites" type="checkbox" /></label>
+      <label class="row"><span>Prompt Library</span><input id="promptLibrary" type="checkbox" /></label>
+      <label class="row"><span>Prompt Enhancer</span><input id="promptEnhancer" type="checkbox" /></label>
+      <label class="row"><span>Conversation Stats</span><input id="conversationStats" type="checkbox" /></label>
+      <label class="row"><span>Chat Export</span><input id="exporter" type="checkbox" /></label>
+      <label class="row"><span>Keyboard Shortcuts</span><input id="shortcutsEnabled" type="checkbox" /></label>
+      <p class="hint" style="margin:8px 0 0">Prompt tools are clipboard-only in v2.6. No automatic composer insertion.</p>
+    </section>
+
+    <button id="reset" class="reset liquid-button" type="button">Reset settings</button>
+    <p class="hint">Changes preview instantly on the active ChatGPT tab. Settings persist locally.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
