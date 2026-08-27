@@ -14,6 +14,128 @@ ChatGPT UI Customizer started as a theme experiment and grew into a full interfa
 **Architecture:** [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)  
 **Privacy & permissions:** [`docs/PRIVACY.md`](docs/PRIVACY.md)
 
+## Quick start
+
+### Option 1 — Clone with Git
+
+```bash
+git clone https://github.com/araeys/chatgpt-ui-customizer.git
+cd chatgpt-ui-customizer
+```
+
+Then load it into Chrome:
+
+1. Open `chrome://extensions`
+2. Enable **Developer mode**
+3. Click **Load unpacked**
+4. Select the cloned `chatgpt-ui-customizer` folder
+5. Open or refresh `https://chatgpt.com`
+
+> Disable older builds of this extension before loading a newer one. Running multiple versions at the same time can cause competing stylesheets and duplicated UI behavior.
+
+### Option 2 — Download as ZIP
+
+1. Click **Code → Download ZIP** on this repository
+2. Extract the ZIP
+3. Open `chrome://extensions`
+4. Enable **Developer mode**
+5. Click **Load unpacked**
+6. Select the extracted project folder
+7. Refresh ChatGPT
+
+## How to use
+
+After loading the extension, open `chatgpt.com` normally. The custom UI is injected directly into ChatGPT.
+
+### Appearance
+
+Use the extension popup to customize:
+
+- dark-purple accent color
+- liquid-glass intensity
+- reflection and depth
+- room background color
+- custom wallpaper
+- wallpaper opacity and blur
+- wallpaper scale from 25% to 400%
+- wallpaper X/Y position
+- message width and UI density
+- animation intensity
+- composer glow motion
+
+Changes are designed to preview live on the active ChatGPT tab.
+
+### Favorites
+
+Hover a conversation in the ChatGPT sidebar and use the Favorite control to save it into the extension's local **Favorites** section.
+
+Favorites are separate from ChatGPT's native Pin feature and are not limited by the native Pin count.
+
+### Prompt Library
+
+Open the extension panel, save reusable prompts into the Prompt Library, then copy the prompt and paste it into ChatGPT.
+
+The current workflow is intentionally clipboard-first instead of directly modifying ChatGPT's ProseMirror editor.
+
+### Prompt Enhancer
+
+Paste or enter a rough prompt into the Prompt Enhancer, choose an enhancement style, then copy the generated result back into ChatGPT.
+
+### Keyboard shortcuts
+
+- `Ctrl + N` attempts to open a new ChatGPT conversation when Chromium allows the page to receive the shortcut
+- `Alt + N` is the reliable New Chat fallback because Chrome can reserve `Ctrl + N` for **New Window**
+- additional extension shortcuts can be configured from the UI
+
+### Export a conversation
+
+Open the extension panel and go to **Export**.
+
+Available outputs include:
+
+- Full Room ZIP
+- HTML
+- Markdown
+- JSON
+
+**Full Room ZIP** uses the integrated export engine to capture the current conversation, transcript data, and recoverable assets. The current-room export is built and downloaded without opening a separate visible manager tab.
+
+## Updating an existing clone
+
+If you already cloned the repository, update it with:
+
+```bash
+cd chatgpt-ui-customizer
+git pull origin main
+```
+
+Then go to `chrome://extensions` and click **Reload** on the extension, or refresh the ChatGPT tab if Chrome has already reloaded the unpacked extension.
+
+## Making your own version
+
+Fork the repository on GitHub first, then clone your fork:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/chatgpt-ui-customizer.git
+cd chatgpt-ui-customizer
+```
+
+Create a branch for your changes:
+
+```bash
+git checkout -b my-custom-theme
+```
+
+After editing:
+
+```bash
+git add .
+git commit -m "Customize ChatGPT UI"
+git push origin my-custom-theme
+```
+
+`git clone` downloads a repository to your computer. `git push` sends your local commits back to a remote repository, so it is used after you have made changes, not for the initial download.
+
 ## What it adds
 
 ### Dark-purple liquid-glass interface
