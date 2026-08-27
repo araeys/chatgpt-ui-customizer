@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ChatGPT UI Customizer portfolio preview</title>
+  <desc id="desc">Dark purple liquid glass browser extension interface mockup with favorites sidebar and animated composer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08070d"/>
+      <stop offset="0.55" stop-color="#0d0914"/>
+      <stop offset="1" stop-color="#130b1d"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="0.35" stop-color="#9c6cff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.035"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a4cff"/>
+      <stop offset="0.5" stop-color="#b18cff"/>
+      <stop offset="1" stop-color="#6a42ff"/>
+    </linearGradient>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="28" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0.55 0 0 0 0.28  0 0.25 0 0 0.12  0 0 0.95 0 0.95  0 0 0 0.75 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="90" r="380" fill="#6b38ff" opacity="0.12"/>
+  <circle cx="1040" cy="780" r="340" fill="#a65cff" opacity="0.08"/>
+
+  <text x="90" y="105" fill="#f6f1ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="52" font-weight="700">ChatGPT UI Customizer</text>
+  <text x="92" y="153" fill="#a89eb9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22">Dark-purple liquid glass interface · Favorites · Prompt tools · Full-room export</text>
+
+  <g transform="translate(86 205)" filter="url(#shadow)">
+    <rect x="0" y="0" width="1428" height="600" rx="34" fill="#07060b" stroke="#ffffff" stroke-opacity="0.07"/>
+
+    <rect x="0" y="0" width="305" height="600" rx="34" fill="#0c0812"/>
+    <rect x="304" y="0" width="1" height="600" fill="#ffffff" opacity="0.06"/>
+    <text x="28" y="54" fill="#f4eefc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">ChatGPT</text>
+
+    <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" fill="#d8d0e4">
+      <text x="30" y="112">New chat</text>
+      <text x="30" y="152">Projects</text>
+      <text x="30" y="192">Library</text>
+      <text x="30" y="232">GPTs</text>
+    </g>
+
+    <text x="28" y="298" fill="#8e839c" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">FAVORITES</text>
+    <rect x="18" y="316" width="269" height="44" rx="14" fill="url(#glass)" stroke="#a978ff" stroke-opacity="0.18"/>
+    <text x="34" y="344" fill="#efe8f7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Campaign concepts</text>
+    <text x="257" y="344" fill="#b37cff" font-family="Arial,sans-serif" font-size="18">★</text>
+    <text x="34" y="392" fill="#c9bfd5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Motion references</text>
+    <text x="34" y="430" fill="#c9bfd5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">Prompt experiments</text>
+
+    <text x="28" y="485" fill="#8e839c" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">RECENTS</text>
+    <text x="34" y="525" fill="#bdb3c9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Visual direction exploration</text>
+    <text x="34" y="558" fill="#bdb3c9" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Export workflow test</text>
+
+    <g transform="translate(344 40)">
+      <text x="0" y="25" fill="#a49aae" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">PERSONALIZED WORKSPACE</text>
+      <text x="0" y="72" fill="#f3edf8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="700">A cleaner ChatGPT, tuned to you.</text>
+      <text x="0" y="110" fill="#aaa0b4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Customize the room, keep favorite chats close, reuse prompts, and export conversations locally.</text>
+
+      <g transform="translate(0 150)">
+        <rect x="0" y="0" width="448" height="112" rx="24" fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.08"/>
+        <text x="24" y="35" fill="#bbaad2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">YOU</text>
+        <text x="24" y="68" fill="#f3edf8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Make this workspace feel more editorial.</text>
+        <text x="24" y="94" fill="#91879e" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Liquid glass · dark purple · less visual clutter</text>
+      </g>
+
+      <g transform="translate(490 150)">
+        <rect x="0" y="0" width="500" height="202" rx="24" fill="#0b0910" stroke="#ffffff" stroke-opacity="0.055"/>
+        <text x="24" y="36" fill="#bbaad2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13">ASSISTANT</text>
+        <text x="24" y="74" fill="#eee8f4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">The interface now keeps the native layout intact</text>
+        <text x="24" y="104" fill="#eee8f4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">while adding a stable glass material system.</text>
+        <rect x="24" y="132" width="178" height="42" rx="14" fill="#17111f"/>
+        <text x="44" y="159" fill="#b38cff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Full Room ZIP</text>
+      </g>
+
+      <g transform="translate(46 408)">
+        <ellipse cx="474" cy="53" rx="510" ry="72" fill="#8d56ff" opacity="0.2" filter="url(#softGlow)"/>
+        <rect x="0" y="0" width="948" height="106" rx="32" fill="#17131c" stroke="url(#accent)" stroke-opacity="0.62" stroke-width="1.4"/>
+        <rect x="2" y="2" width="944" height="102" rx="30" fill="none" stroke="#ffffff" stroke-opacity="0.09"/>
+        <circle cx="45" cy="53" r="20" fill="#201927"/>
+        <path d="M45 43v20M35 53h20" stroke="#d8cbea" stroke-width="2" stroke-linecap="round"/>
+        <text x="82" y="60" fill="#b6acbe" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Ask anything...</text>
+        <rect x="846" y="22" width="64" height="64" rx="22" fill="url(#accent)"/>
+        <path d="M878 62V40m0 0-9 9m9-9 9 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+
+  <text x="1280" y="860" fill="#7f708f" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15">by @araeys</text>
+</svg>
