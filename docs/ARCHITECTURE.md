@@ -1,6 +1,6 @@
 # Architecture Notes
 
-RAEY GPT Suite is split into three broad layers.
+ChatGPT UI Customizer is split into three broad layers.
 
 ## 1. Appearance layer
 
@@ -15,12 +15,12 @@ The visual system uses:
 
 ## 2. Productivity layer
 
-`content.js` also owns RAEY-specific interaction features such as:
+`content.js` also owns extension-specific interaction features such as:
 - unlimited local Favorites;
 - prompt utilities;
 - shortcut handling;
 - wallpaper controls;
-- the RAEY floating panel.
+- the floating customizer panel.
 
 Local user state is persisted through Chrome extension storage.
 
@@ -36,7 +36,7 @@ The v2.7 integration supports current-room ZIP export without opening a visible 
 
 ## Stability strategy
 
-ChatGPT is a frequently changing React application. RAEY therefore avoids assuming that every generated class name is stable.
+ChatGPT is a frequently changing React application. The extension therefore avoids assuming that every generated class name is stable.
 
 Key stability rules:
 - ignore character-data changes while responses stream;
