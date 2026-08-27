@@ -1,6 +1,6 @@
 # Privacy & Permission Notes
 
-RAEY GPT Suite is a local Chrome extension built for personal use.
+ChatGPT UI Customizer is a local Chrome extension built for personal use.
 
 ## Data handling
 
